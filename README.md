@@ -1,10 +1,5 @@
 # Hi there, I'm Kapisch 👋
 
-<p align="center">
-  <img src="github-plaque.svg" alt="Kapisch's GitHub Stats Plaque" />
-</p>
-
-
 ---
 
 ### 👨‍💻 About Me
