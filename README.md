@@ -4,7 +4,7 @@
 
 ### 👨‍💻 About Me
 
-I am a passionate and self-motivated aspiring developer with a strong focus on front-end technologies. My journey in tech is driven by a love for building intuitive and useful websites and web apps.
+Non Coder turned Vibe Coder.
 
 - I'm currently focused on deepening my expertise in Vibe Coding and learning about the languages on the go.
 - I'm always learning and exploring new technologies.
