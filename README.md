@@ -1,7 +1,7 @@
 <!-- HERO -->
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&size=26&pause=1200&color=58A6FF&center=true&vCenter=true&width=520&lines=Hi%2C+I'm+Kapisch.;Non-Coder+turned+Vibe+Coder.;Building+with+AI%2C+Web+%26+Taste." />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&size=26&pause=1200&color=58A6FF&center=true&vCenter=true&width=620&lines=Hi%2C+I'm+Kapisch.;Non-Coder+turned+Vibe+Coder.;Building+AI-powered+products+with+taste." />
 
 <br/>
 
@@ -12,21 +12,26 @@
 
 <br/>
 
-<!-- SOCIAL ICONS -->
-<p align="center">
-  <a href="https://x.com/onekapisch" target="_blank">
-    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white"/>
+<!-- SOCIALS (Premium pill buttons + real logos) -->
+<div align="center">
+  <a href="https://x.com/onekapisch" target="_blank" rel="noopener noreferrer" title="X / Twitter">
+    <img height="44" alt="X" src="https://img.shields.io/badge/X-0D1117?style=for-the-badge&logo=x&logoColor=white" />
   </a>
-  <a href="https://www.threads.com/@kapischh" target="_blank">
-    <img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white"/>
+  &nbsp;&nbsp;
+  <a href="https://www.threads.com/@kapischh" target="_blank" rel="noopener noreferrer" title="Threads">
+    <img height="44" alt="Threads" src="https://img.shields.io/badge/Threads-0D1117?style=for-the-badge&logo=threads&logoColor=white" />
   </a>
-  <a href="https://bsky.app/profile/onekapisch.com" target="_blank">
-    <img src="https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=bluesky&logoColor=white"/>
+  &nbsp;&nbsp;
+  <a href="https://bsky.app/profile/onekapisch.com" target="_blank" rel="noopener noreferrer" title="Bluesky">
+    <img height="44" alt="Bluesky" src="https://img.shields.io/badge/Bluesky-0D1117?style=for-the-badge&logo=bluesky&logoColor=white" />
   </a>
-  <a href="https://primal.net/p/nprofile1qqs0hhtwrh5f9j5udp6gzz7epftfmcdqhqy4ta2chg2mlc7h8nu86lge2j9ew" target="_blank">
-    <img src="https://img.shields.io/badge/Primal-6B4EFF?style=for-the-badge&logo=internetcomputer&logoColor=white"/>
+  &nbsp;&nbsp;
+  <a href="https://primal.net/p/nprofile1qqs0hhtwrh5f9j5udp6gzz7epftfmcdqhqy4ta2chg2mlc7h8nu86lge2j9ew" target="_blank" rel="noopener noreferrer" title="Primal">
+    <img height="44" alt="Primal" src="https://img.shields.io/badge/Primal-0D1117?style=for-the-badge&logoColor=white" />
   </a>
-</p>
+</div>
+
+<br/>
 
 </div>
 
@@ -35,11 +40,9 @@
 ## 🧬 About Me
 
 - 🚀 **Non-coder turned Vibe Coder**
-- 🤖 Building AI-powered products & web experiences
+- 🤖 Building AI-powered products and web experiences
 - 🧠 Obsessed with clarity, leverage, and clean execution
 - 🌍 Based in **Germany**, shipping globally
-
-I focus on *learning in public*, shipping fast, and improving through iteration.
 
 ---
 
@@ -64,7 +67,6 @@ I focus on *learning in public*, shipping fast, and improving through iteration.
 
 - Java
 - Shell scripting
-- Data parsing
 - Automation logic
 
 </td>
@@ -90,15 +92,15 @@ I focus on *learning in public*, shipping fast, and improving through iteration.
 <tr>
 <td width="50%">
 
-### 🧠 **Tminus AI**
-AI productivity, prompts & systems  
+### 🧠 Tminus AI  
+AI productivity, prompts and systems  
 🔗 https://www.tminusai.com
 
 </td>
 <td width="50%">
 
-### 🌍 **SkyLocation**
-Location & sky-based utility app  
+### 🌍 SkyLocation  
+Location and sky-based utility app  
 🔗 https://www.skylocation.app
 
 </td>
@@ -107,15 +109,15 @@ Location & sky-based utility app
 <tr>
 <td>
 
-### 🇩🇪 **Life Hacks Germany**
+### 🇩🇪 Life Hacks Germany  
 Practical guides for living in Germany  
 🔗 https://www.lifehacksgermany.com
 
 </td>
 <td>
 
-### ⛽ **TankAlert**
-Fuel price alerts & monitoring  
+### ⛽ TankAlert  
+Fuel price alerts and monitoring  
 🔗 https://www.tankalert.de
 
 </td>
@@ -124,15 +126,15 @@ Fuel price alerts & monitoring
 <tr>
 <td>
 
-### 🛍️ **Gumroad Store**
-Digital products & guides  
+### 🛍️ Gumroad Store  
+Digital products and guides  
 🔗 https://kapisch.gumroad.com
 
 </td>
 <td>
 
-### 🌐 **Personal Website**
-Central hub & experiments  
+### 🌐 Personal Website  
+Central hub and experiments  
 🔗 https://www.onekapisch.com
 
 </td>
@@ -141,8 +143,8 @@ Central hub & experiments
 <tr>
 <td colspan="2" align="center">
 
-### ₿ **Adidab**
-Bitcoin-focused content & ideas  
+### ₿ Adidab  
+Bitcoin-focused content and ideas  
 🔗 https://www.adidab.com
 
 </td>
@@ -153,12 +155,10 @@ Bitcoin-focused content & ideas
 
 ## 📡 How to Connect
 
-I enjoy connecting with builders, thinkers, and people shipping interesting things.
-
-- 🐦 X (Twitter): https://x.com/onekapisch  
-- 🧵 Threads: https://www.threads.com/@kapischh  
-- 🌤️ Bluesky: https://bsky.app/profile/onekapisch.com  
-- 🌐 Primal: https://primal.net/p/nprofile1qqs0hhtwrh5f9j5udp6gzz7epftfmcdqhqy4ta2chg2mlc7h8nu86lge2j9ew  
+- X: https://x.com/onekapisch  
+- Threads: https://www.threads.com/@kapischh  
+- Bluesky: https://bsky.app/profile/onekapisch.com  
+- Primal: https://primal.net/p/nprofile1qqs0hhtwrh5f9j5udp6gzz7epftfmcdqhqy4ta2chg2mlc7h8nu86lge2j9ew  
 
 ---
 
