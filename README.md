@@ -39,7 +39,6 @@
 
 ## 🧬 About Me
 
-- 🚀 **Non-coder turned Vibe Coder**
 - 🤖 Building AI-powered products and web experiences
 - 🧠 Obsessed with clarity, leverage, and clean execution
 - 🌍 Based in **Germany**, shipping globally
