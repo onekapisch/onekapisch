@@ -1,7 +1,7 @@
 <!-- HERO -->
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&size=26&pause=1200&color=58A6FF&center=true&vCenter=true&width=620&lines=Hi%2C+I'm+Kapisch.;Non-Coder+turned+Vibe+Coder.;Building+AI-powered+products+with+taste." />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&size=26&pause=1200&color=58A6FF&center=true&vCenter=true&width=620&lines=Hi%2C+I'm+Kapisch.;Building+AI-powered+products+with+taste." />
 
 <br/>
 
