@@ -113,14 +113,14 @@ Location and sky-based utility app
 <td>
 
 ### 🇩🇪 Life Hacks Germany  
-Practical guides for living in Germany  
+Practical guides, tips and tricks and much more for living in Germany  
 🔗 https://www.lifehacksgermany.com
 
 </td>
 <td>
 
 ### ⛽ TankAlert  
-Fuel price alerts and monitoring  
+Fuel price alerts and monitoring in Germany
 🔗 https://www.tankalert.de
 
 </td>
@@ -130,14 +130,14 @@ Fuel price alerts and monitoring
 <td>
 
 ### 🛍️ Gumroad Store  
-Digital products and guides  
+Digital products and AI productivity guides
 🔗 https://kapisch.gumroad.com
 
 </td>
 <td>
 
 ### 🌐 Personal Website  
-Central hub and experiments  
+Central hub of my Portfolio  
 🔗 https://www.onekapisch.com
 
 </td>
