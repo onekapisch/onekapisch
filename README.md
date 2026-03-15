@@ -136,7 +136,7 @@ Digital products and AI productivity guides
 </td>
 <td>
 
-### 🌐 Personal Website  
+1️⃣ One Kapisch
 Central hub of my Portfolio  
 🔗 https://www.onekapisch.com
 
