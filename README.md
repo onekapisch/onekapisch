@@ -39,7 +39,8 @@
 
 ## 🧬 About Me
 
-- 🤖 Building AI-powered products and web experiences
+- 👔 Enterprise AI Architect at Siemens Healthineers HQ in Germany
+- ⚒️ Building useful Web Apps and iOS Apps that makes a difference
 - 🧠 Obsessed with clarity, leverage, and clean execution
 - 🌍 Based in **Germany**, shipping globally
 
