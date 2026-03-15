@@ -74,9 +74,10 @@
 
 - Git & GitHub
 - VS Code
-- Chrome DevTools
+- Codex
+- Claude Code
 - npm / pnpm
-- Vercel / Netlify
+- Vercel 
 
 </td>
 </tr>
