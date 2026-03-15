@@ -103,6 +103,7 @@ AI productivity, prompts and systems
 ### 🌍 SkyLocation iOS App
 Location and sky-based utility app  
 🔗 https://www.skylocation.app
+
 🔗 https://apps.apple.com/de/app/skylocation/id6751451868?l=en-GB
 
 </td>
