@@ -1,7 +1,7 @@
 <!-- HERO -->
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&size=26&pause=1200&color=58A6FF&center=true&vCenter=true&width=620&lines=Hi%2C+I'm+Kapisch.;Building+AI-powered+products+with+taste." />
+<img src="./header.svg" width="100%" alt="Kapisch header" />
 
 <br/>
 
@@ -12,7 +12,7 @@
 
 <br/>
 
-<!-- SOCIALS (Premium pill buttons + real logos) -->
+<!-- SOCIALS -->
 <div align="center">
   <a href="https://x.com/onekapisch" target="_blank" rel="noopener noreferrer" title="X / Twitter">
     <img height="44" alt="X" src="https://img.shields.io/badge/X-0D1117?style=for-the-badge&logo=x&logoColor=white" />
@@ -120,7 +120,7 @@ Practical guides, tips and tricks and much more for living in Germany
 <td>
 
 ### ⛽ TankAlert  
-Fuel price alerts and monitoring in Germany
+Fuel price alerts and monitoring in Germany  
 🔗 https://www.tankalert.de
 
 </td>
@@ -130,13 +130,13 @@ Fuel price alerts and monitoring in Germany
 <td>
 
 ### 🛍️ Gumroad Store  
-Digital products and AI productivity guides
+Digital products and AI productivity guides  
 🔗 https://kapisch.gumroad.com
 
 </td>
 <td>
 
-1️⃣ One Kapisch
+### 1️⃣ One Kapisch  
 Central hub of my Portfolio  
 🔗 https://www.onekapisch.com
 
