@@ -1,17 +1,12 @@
 <!-- HERO -->
 <div align="center">
-
 <img src="https://readme-typing-svg.demolab.com?font=Inter&size=26&pause=1200&color=58A6FF&center=true&vCenter=true&width=620&lines=Hi%2C+I'm+Kapisch.;Building+AI-powered+products+with+taste." />
-
 <br/>
-
 <p align="center">
   <b>Learning. Building. Shipping.</b><br/>
   Turning ideas into real products, web tech, and aesthetics.
 </p>
-
 <br/>
-
 <!-- SOCIALS -->
 <div align="center">
   <a href="https://x.com/onekapisch" target="_blank" rel="noopener noreferrer" title="X / Twitter">
@@ -30,9 +25,7 @@
     <img height="44" alt="Primal" src="https://img.shields.io/badge/Primal-0D1117?style=for-the-badge&logoColor=white" />
   </a>
 </div>
-
 <br/>
-
 </div>
 
 ---
@@ -40,7 +33,7 @@
 ## 🧬 About Me
 
 - 👔 Enterprise AI Architect at Siemens Healthineers HQ in Germany
-- ⚒️ Building useful Web Apps and iOS Apps that makes a difference
+- ⚒️ Building useful Web Apps and macOS Apps that make a difference
 - 🧠 Obsessed with clarity, leverage, and clean execution
 - 🌍 Based in **Germany**, shipping globally
 
@@ -94,7 +87,37 @@
 <tr>
 <td colspan="2" align="center">
 
+### ☕ Tokens 4 Breakfast — Know exactly what your AI costs
+
+Stop guessing what you're spending on AI. Tokens 4 Breakfast sits in your macOS menu bar and tracks Claude, OpenAI, Gemini, and more in real time — API costs, subscriptions, session usage, all in one place.
+
+**Native macOS app. No login. No ads. No tracking.**
+
+&nbsp;
+<a href="https://tokens4breakfast.app">
+  <img height="36" alt="Website" src="https://img.shields.io/badge/tokens4breakfast.app-0D1117?style=for-the-badge&logo=apple&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://tokens4breakfast.app/downloads/Tokens%204%20Breakfast.zip">
+  <img height="36" alt="Download" src="https://img.shields.io/badge/Download_Free-1F6FEB?style=for-the-badge&logo=apple&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://t4b.lemonsqueezy.com/checkout/buy/579eca4d-fcff-4eae-a913-152eae2d5c2d">
+  <img height="36" alt="Get Pro" src="https://img.shields.io/badge/Get_Pro-F97316?style=for-the-badge&logoColor=white" />
+</a>
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<table>
+<tr>
+<td colspan="2" align="center">
+
 ### 🪗 Unfold AI — Read AI output at your pace
+
 Tired of drowning in walls of AI text? Unfold AI turns long AI responses into layers — bottom line first, details when you want them. Works on ChatGPT, Claude, Gemini, Grok, Perplexity, DeepSeek & more.
 
 **Open source. Free. Zero data collection.**
@@ -132,12 +155,10 @@ AI productivity, prompts and systems
 ### 🌍 SkyLocation iOS App
 Location and sky-based utility app
 🔗 https://www.skylocation.app
-
 🔗 https://apps.apple.com/de/app/skylocation/id6751451868?l=en-GB
 
 </td>
 </tr>
-
 <tr>
 <td>
 
@@ -154,7 +175,6 @@ Fuel price alerts and monitoring in Germany
 
 </td>
 </tr>
-
 <tr>
 <td>
 
@@ -171,7 +191,6 @@ Central hub of my Portfolio
 
 </td>
 </tr>
-
 <tr>
 <td colspan="2" align="center">
 
@@ -197,10 +216,10 @@ Bitcoin-focused content and ideas
 <div align="center">
 
 ### ✨ Philosophy
+
 <b>Build → Learn → Refine → Ship → Repeat</b>
 
 <br/>
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:1F6FEB&height=120&section=footer"/>
 
 </div>
