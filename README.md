@@ -7,7 +7,7 @@
 
 <p align="center">
   <b>Learning. Building. Shipping.</b><br/>
-  Turning ideas into real products with AI, web tech, and aesthetics.
+  Turning ideas into real products, web tech, and aesthetics.
 </p>
 
 <br/>
