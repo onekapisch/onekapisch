@@ -12,7 +12,7 @@
 
 <br/>
 
-<!-- SOCIALS (Premium pill buttons + real logos) -->
+<!-- SOCIALS -->
 <div align="center">
   <a href="https://x.com/onekapisch" target="_blank" rel="noopener noreferrer" title="X / Twitter">
     <img height="44" alt="X" src="https://img.shields.io/badge/X-0D1117?style=for-the-badge&logo=x&logoColor=white" />
@@ -77,7 +77,7 @@
 - Codex
 - Claude Code
 - npm / pnpm
-- Vercel 
+- Vercel
 
 </td>
 </tr>
@@ -85,23 +85,52 @@
 
 ---
 
-## 🚀 Projects I’ve Built
+## 🚀 Projects I've Built
 
 > Real products. Real users. Real learning.
+
+<!-- FEATURED -->
+<table>
+<tr>
+<td colspan="2" align="center">
+
+### 🪗 Unfold AI — Read AI output at your pace
+Tired of drowning in walls of AI text? Unfold AI turns long AI responses into layers — bottom line first, details when you want them. Works on ChatGPT, Claude, Gemini, Grok, Perplexity, DeepSeek & more.
+
+**Open source. Free. Zero data collection.**
+
+&nbsp;
+<a href="https://chromewebstore.google.com/detail/unfold-ai-ai-output-contr/bmaehlmglmcpgokdlbniifhgnfgajfkl?hl=en&authuser=0">
+  <img height="36" alt="Chrome Web Store" src="https://img.shields.io/badge/Chrome_Web_Store-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://addons.mozilla.org/en-US/firefox/addon/unfold-ai-ai-output-controller/">
+  <img height="36" alt="Firefox Add-ons" src="https://img.shields.io/badge/Firefox_Add--ons-FF7139?style=for-the-badge&logo=firefox&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://github.com/onekapisch/Unfold-AI">
+  <img height="36" alt="GitHub" src="https://img.shields.io/badge/Source_Code-0D1117?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+</td>
+</tr>
+</table>
+
+<br/>
 
 <table>
 <tr>
 <td width="50%">
 
-### 🧠 Tminus AI  
-AI productivity, prompts and systems  
+### 🧠 Tminus AI
+AI productivity, prompts and systems
 🔗 https://www.tminusai.com
 
 </td>
 <td width="50%">
 
 ### 🌍 SkyLocation iOS App
-Location and sky-based utility app  
+Location and sky-based utility app
 🔗 https://www.skylocation.app
 
 🔗 https://apps.apple.com/de/app/skylocation/id6751451868?l=en-GB
@@ -112,14 +141,14 @@ Location and sky-based utility app
 <tr>
 <td>
 
-### 🇩🇪 Life Hacks Germany  
-Practical guides, tips and tricks and much more for living in Germany  
+### 🇩🇪 Life Hacks Germany
+Practical guides, tips and tricks and much more for living in Germany
 🔗 https://www.lifehacksgermany.com
 
 </td>
 <td>
 
-### ⛽ TankAlert  
+### ⛽ TankAlert
 Fuel price alerts and monitoring in Germany
 🔗 https://www.tankalert.de
 
@@ -129,15 +158,15 @@ Fuel price alerts and monitoring in Germany
 <tr>
 <td>
 
-### 🛍️ Gumroad Store  
+### 🛍️ Gumroad Store
 Digital products and AI productivity guides
 🔗 https://kapisch.gumroad.com
 
 </td>
 <td>
 
-1️⃣ One Kapisch
-Central hub of my Portfolio  
+### 1️⃣ One Kapisch
+Central hub of my Portfolio
 🔗 https://www.onekapisch.com
 
 </td>
@@ -146,8 +175,8 @@ Central hub of my Portfolio
 <tr>
 <td colspan="2" align="center">
 
-### ₿ Adidab  
-Bitcoin-focused content and ideas  
+### ₿ Adidab
+Bitcoin-focused content and ideas
 🔗 https://www.adidab.com
 
 </td>
@@ -158,10 +187,10 @@ Bitcoin-focused content and ideas
 
 ## 📡 How to Connect
 
-- X: https://x.com/onekapisch  
-- Threads: https://www.threads.com/@kapischh  
-- Bluesky: https://bsky.app/profile/onekapisch.com  
-- Primal: https://primal.net/p/nprofile1qqs0hhtwrh5f9j5udp6gzz7epftfmcdqhqy4ta2chg2mlc7h8nu86lge2j9ew  
+- X: https://x.com/onekapisch
+- Threads: https://www.threads.com/@kapischh
+- Bluesky: https://bsky.app/profile/onekapisch.com
+- Primal: https://primal.net/p/nprofile1qqs0hhtwrh5f9j5udp6gzz7epftfmcdqhqy4ta2chg2mlc7h8nu86lge2j9ew
 
 ---
 
