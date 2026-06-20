@@ -23,17 +23,17 @@ A one-person studio out of Munich. By day, an **Enterprise AI Architect at Sieme
 
 ### ❄️ The fleet — built to be owned
 
-| Product | What it does | Platform | |
-|---|---|---|---|
-| **[SkyLocation](https://github.com/onekapisch/skylocation-website)** | Know exactly where you are — even with no signal | iOS · Android | [site](https://skylocation.app) |
-| **[Tokens 4 Breakfast](https://github.com/onekapisch/Tokens4Breakfast-daily)** | Track AI spend across Claude, GPT, Gemini & more — in your menu bar | macOS | [site](https://tokens4breakfast.app) |
-| **[Mac 4 Breakfast](https://github.com/onekapisch/Mac-4-Breakfast)** | All-in-one Mac battery & power — cycle count, temp, live watts, smart alerts | macOS | [site](https://mac4breakfast.app) |
-| **[LUMEL](https://github.com/onekapisch/LUMEL-public)** | Two-way XDR brightness — push past macOS limits, or dim below the floor | macOS | [site](https://getlumel.app) |
-| **[Minimizer](https://github.com/onekapisch/macOS-Minimizer)** · `open source` | Minimize every window & restore your workspace with one hotkey | macOS | [![stars](https://img.shields.io/github/stars/onekapisch/macOS-Minimizer?style=social&label=)](https://github.com/onekapisch/macOS-Minimizer) |
-| **T-MINUSAI** | Compare AI models & plans — no hype, no upsell | web | [site](https://tminusai.com) |
-| **TankAlert** | Live fuel prices across Germany, by city & station | web | [site](https://tankalert.de) |
-| **[Life Hacks Germany](https://github.com/onekapisch/life-hacks-germany)** | Verification-first guides to living in Germany | web | [site](https://lifehacksgermany.com) |
-| **[Unfold AI](https://github.com/onekapisch/Unfold-AI)** · `open source` | Read AI output at your pace — layers, bottom line first | Chrome · Firefox | [![stars](https://img.shields.io/github/stars/onekapisch/Unfold-AI?style=social&label=)](https://github.com/onekapisch/Unfold-AI) |
+| | Product | What it does | Platform | |
+|:--:|---|---|---|---|
+| <img src="docs/icons/skylocation.png" width="32"> | **[SkyLocation](https://github.com/onekapisch/skylocation-website)** | Know exactly where you are — even with no signal | iOS · Android | [site](https://skylocation.app) |
+| <img src="docs/icons/tokens.png" width="32"> | **[Tokens 4 Breakfast](https://github.com/onekapisch/Tokens4Breakfast-daily)** | Track AI spend across Claude, GPT, Gemini & more — in your menu bar | macOS | [site](https://tokens4breakfast.app) |
+| <img src="docs/icons/mac4breakfast.png" width="32"> | **[Mac 4 Breakfast](https://github.com/onekapisch/Mac-4-Breakfast)** | All-in-one Mac battery & power — cycle count, temp, live watts, smart alerts | macOS | [site](https://mac4breakfast.app) |
+| <img src="docs/icons/lumel.png" width="32"> | **[LUMEL](https://github.com/onekapisch/LUMEL-public)** | Two-way XDR brightness — push past macOS limits, or dim below the floor | macOS | [site](https://getlumel.app) |
+| <img src="docs/icons/minimizer.png" width="32"> | **[Minimizer](https://github.com/onekapisch/macOS-Minimizer)** · `open source` | Minimize every window & restore your workspace with one hotkey | macOS | [![stars](https://img.shields.io/github/stars/onekapisch/macOS-Minimizer?style=social&label=)](https://github.com/onekapisch/macOS-Minimizer) |
+| <img src="docs/icons/tminusai.png" width="32"> | **T-MINUSAI** | Compare AI models & plans — no hype, no upsell | web | [site](https://tminusai.com) |
+| <img src="docs/icons/tankalert.png" width="32"> | **TankAlert** | Live fuel prices across Germany, by city & station | web | [site](https://tankalert.de) |
+| <img src="docs/icons/lifehacks.png" width="32"> | **[Life Hacks Germany](https://github.com/onekapisch/life-hacks-germany)** | Verification-first guides to living in Germany | web | [site](https://lifehacksgermany.com) |
+| <img src="docs/icons/unfoldai.png" width="32"> | **[Unfold AI](https://github.com/onekapisch/Unfold-AI)** · `open source` | Read AI output at your pace — layers, bottom line first | Chrome · Firefox | [![stars](https://img.shields.io/github/stars/onekapisch/Unfold-AI?style=social&label=)](https://github.com/onekapisch/Unfold-AI) |
 
 ### 🛠 How I build
 Local-first by default. No account unless you truly need one. Nothing sold to brokers, no ads, no growth hacks hiding in the work. Buy once, own it — I'd rather ship one honest tool than ten that rent your attention.
