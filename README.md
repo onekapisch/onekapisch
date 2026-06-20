@@ -5,8 +5,6 @@
   <img src="docs/hero.png" alt="onekapisch — privacy-first software, built to be owned not rented" width="100%" />
 </picture>
 
-<h1>Kapish Bhardwaj</h1>
-
 <p><b>Privacy-first software, built to be owned — not rented.</b></p>
 <p><code>local-first</code> · <code>no telemetry</code> · <code>no ads</code> · <code>nothing sold, ever</code></p>
 
