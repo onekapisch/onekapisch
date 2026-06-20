@@ -1,225 +1,49 @@
-<!-- HERO -->
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Inter&size=26&pause=1200&color=58A6FF&center=true&vCenter=true&width=620&lines=Hi%2C+I'm+Kapisch.;Building+AI-powered+products+with+taste." />
-<br/>
-<p align="center">
-  <b>Learning. Building. Shipping.</b><br/>
-  Turning ideas into real products, web tech, and aesthetics.
-</p>
-<br/>
-<!-- SOCIALS -->
-<div align="center">
-  <a href="https://x.com/onekapisch" target="_blank" rel="noopener noreferrer" title="X / Twitter">
-    <img height="44" alt="X" src="https://img.shields.io/badge/X-0D1117?style=for-the-badge&logo=x&logoColor=white" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://www.threads.com/@kapischh" target="_blank" rel="noopener noreferrer" title="Threads">
-    <img height="44" alt="Threads" src="https://img.shields.io/badge/Threads-0D1117?style=for-the-badge&logo=threads&logoColor=white" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://bsky.app/profile/onekapisch.com" target="_blank" rel="noopener noreferrer" title="Bluesky">
-    <img height="44" alt="Bluesky" src="https://img.shields.io/badge/Bluesky-0D1117?style=for-the-badge&logo=bluesky&logoColor=white" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://primal.net/p/nprofile1qqs0hhtwrh5f9j5udp6gzz7epftfmcdqhqy4ta2chg2mlc7h8nu86lge2j9ew" target="_blank" rel="noopener noreferrer" title="Primal">
-    <img height="44" alt="Primal" src="https://img.shields.io/badge/Primal-0D1117?style=for-the-badge&logoColor=white" />
-  </a>
-</div>
-<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="docs/hero-light.png">
+  <img src="docs/hero.png" alt="onekapisch — privacy-first software, built to be owned not rented" width="100%" />
+</picture>
+
+<h1>Kapish Bhardwaj</h1>
+
+<p><b>Privacy-first software, built to be owned — not rented.</b></p>
+<p><code>local-first</code> · <code>no telemetry</code> · <code>no ads</code> · <code>nothing sold, ever</code></p>
+
+<a href="https://onekapisch.com"><img src="https://img.shields.io/badge/onekapisch.com-0B0E14?style=flat-square&labelColor=0B0E14" alt="Website"></a>
+<a href="https://x.com/onekapisch"><img src="https://img.shields.io/badge/X-0B0E14?style=flat-square&logo=x&logoColor=white" alt="X"></a>
+<a href="https://www.threads.com/@kapisch_ai"><img src="https://img.shields.io/badge/Threads-0B0E14?style=flat-square&logo=threads&logoColor=white" alt="Threads"></a>
+<a href="https://bsky.app/profile/onekapisch.com"><img src="https://img.shields.io/badge/Bluesky-0B0E14?style=flat-square&logo=bluesky&logoColor=white" alt="Bluesky"></a>
+
 </div>
 
 ---
 
-## 🧬 About Me
+A one-person studio out of Munich. By day, an **Enterprise AI Architect at Siemens Healthineers**. By night, I ship small, sharp, private tools — local-first software that respects the people who use it: no accounts, no tracking, no subscription traps.
 
-- 👔 Enterprise AI Architect at Siemens Healthineers HQ in Germany
-- ⚒️ Building useful Web Apps and macOS Apps that make a difference
-- 🧠 Obsessed with clarity, leverage, and clean execution
-- 🌍 Based in **Germany**, shipping globally
+**→ Experience the whole fleet at [onekapisch.com](https://onekapisch.com)** — a hand-coded WebGL world where one swarm of ice cubes becomes a planet, shatters mid-air, and reassembles into every app icon. (~230 cubes, one GPU draw call, real spring physics, ice refracting light at its true index of refraction — 1.31.)
 
----
+### ❄️ The fleet — built to be owned
 
-## 🧰 Tech Stack
+| Product | What it does | Platform | |
+|---|---|---|---|
+| **SkyLocation** | Know exactly where you are — even with no signal | iOS · Android | [site](https://skylocation.app) |
+| **Tokens 4 Breakfast** | Track AI spend across Claude, GPT, Gemini & more — in your menu bar | macOS | [site](https://tokens4breakfast.app) |
+| **Mac 4 Breakfast** | All-in-one Mac battery & power — cycle count, temp, live watts, smart alerts | macOS | [site](https://mac4breakfast.app) |
+| **LUMEL** | Two-way XDR brightness — push past macOS limits, or dim below the floor | macOS | [site](https://getlumel.app) |
+| **Minimizer** · `open source` | Minimize every window & restore your workspace with one hotkey | macOS | [![stars](https://img.shields.io/github/stars/onekapisch/macOS-Minimizer?style=social&label=)](https://github.com/onekapisch/macOS-Minimizer) |
+| **T-MINUSAI** | Compare AI models & plans — no hype, no upsell | web | [site](https://tminusai.com) |
+| **TankAlert** | Live fuel prices across Germany, by city & station | web | [site](https://tankalert.de) |
+| **Life Hacks Germany** | Verification-first guides to living in Germany | web | [site](https://lifehacksgermany.com) |
+| **Unfold AI** · `open source` | Read AI output at your pace — layers, bottom line first | Chrome · Firefox | [![stars](https://img.shields.io/github/stars/onekapisch/Unfold-AI?style=social&label=)](https://github.com/onekapisch/Unfold-AI) |
 
-<table>
-<tr>
-<td width="33%"><b>Frontend</b></td>
-<td width="33%"><b>Backend & Logic</b></td>
-<td width="33%"><b>Tools & Platforms</b></td>
-</tr>
-<tr>
-<td>
+### 🛠 How I build
+Local-first by default. No account unless you truly need one. Nothing sold to brokers, no ads, no growth hacks hiding in the work. Buy once, own it — I'd rather ship one honest tool than ten that rent your attention.
 
-- JavaScript (ES6+)
-- React
-- HTML5 / CSS3
-- REST APIs
+### ⚙️ Stack
+`Swift / SwiftUI` · `TypeScript / React` · `vanilla JS + WebGL (Three.js)` · `Node` · `Vercel`
 
-</td>
-<td>
+### 🤝 Find me
+[onekapisch.com](https://onekapisch.com) · [X](https://x.com/onekapisch) · [Threads](https://www.threads.com/@kapisch_ai) · [Bluesky](https://bsky.app/profile/onekapisch.com) · `kapisch@icloud.com`
 
-- Java
-- Shell scripting
-- Automation logic
-
-</td>
-<td>
-
-- Git & GitHub
-- VS Code
-- Codex
-- Claude Code
-- npm / pnpm
-- Vercel
-
-</td>
-</tr>
-</table>
-
----
-
-## 🚀 Projects I've Built
-
-> Real products. Real users. Real learning.
-
-<!-- FEATURED -->
-<table>
-<tr>
-<td colspan="2" align="center">
-
-### ☕ Tokens 4 Breakfast — Know exactly what your AI costs
-
-Stop guessing what you're spending on AI. Tokens 4 Breakfast sits in your macOS menu bar and tracks Claude, OpenAI, Gemini, and more in real time — API costs, subscriptions, session usage, all in one place.
-
-**Native macOS app. No login. No ads. No tracking.**
-
-&nbsp;
-<a href="https://tokens4breakfast.app">
-  <img height="36" alt="Website" src="https://img.shields.io/badge/tokens4breakfast.app-0D1117?style=for-the-badge&logo=apple&logoColor=white" />
-</a>
-&nbsp;
-<a href="https://tokens4breakfast.app/downloads/Tokens%204%20Breakfast.zip">
-  <img height="36" alt="Download" src="https://img.shields.io/badge/Download_Free-1F6FEB?style=for-the-badge&logo=apple&logoColor=white" />
-</a>
-&nbsp;
-<a href="https://t4b.lemonsqueezy.com/checkout/buy/579eca4d-fcff-4eae-a913-152eae2d5c2d">
-  <img height="36" alt="Get Pro" src="https://img.shields.io/badge/Get_Pro-F97316?style=for-the-badge&logoColor=white" />
-</a>
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-<table>
-<tr>
-<td colspan="2" align="center">
-
-### 🪗 Unfold AI — Read AI output at your pace
-
-Tired of drowning in walls of AI text? Unfold AI turns long AI responses into layers — bottom line first, details when you want them. Works on ChatGPT, Claude, Gemini, Grok, Perplexity, DeepSeek & more.
-
-**Open source. Free. Zero data collection.**
-
-&nbsp;
-<a href="https://chromewebstore.google.com/detail/unfold-ai-ai-output-contr/bmaehlmglmcpgokdlbniifhgnfgajfkl?hl=en&authuser=0">
-  <img height="36" alt="Chrome Web Store" src="https://img.shields.io/badge/Chrome_Web_Store-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" />
-</a>
-&nbsp;
-<a href="https://addons.mozilla.org/en-US/firefox/addon/unfold-ai-ai-output-controller/">
-  <img height="36" alt="Firefox Add-ons" src="https://img.shields.io/badge/Firefox_Add--ons-FF7139?style=for-the-badge&logo=firefox&logoColor=white" />
-</a>
-&nbsp;
-<a href="https://github.com/onekapisch/Unfold-AI">
-  <img height="36" alt="GitHub" src="https://img.shields.io/badge/Source_Code-0D1117?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-<table>
-<tr>
-<td width="50%">
-
-### 🧠 Tminus AI
-AI productivity, prompts and systems
-🔗 https://www.tminusai.com
-
-</td>
-<td width="50%">
-
-### 🌍 SkyLocation iOS App
-Location and sky-based utility app
-🔗 https://www.skylocation.app
-🔗 https://apps.apple.com/de/app/skylocation/id6751451868?l=en-GB
-
-</td>
-</tr>
-<tr>
-<td>
-
-### 🇩🇪 Life Hacks Germany
-Practical guides, tips and tricks and much more for living in Germany
-🔗 https://www.lifehacksgermany.com
-
-</td>
-<td>
-
-### ⛽ TankAlert
-Fuel price alerts and monitoring in Germany
-🔗 https://www.tankalert.de
-
-</td>
-</tr>
-<tr>
-<td>
-
-### 🛍️ Gumroad Store
-Digital products and AI productivity guides
-🔗 https://kapisch.gumroad.com
-
-</td>
-<td>
-
-### 1️⃣ One Kapisch
-Central hub of my Portfolio
-🔗 https://www.onekapisch.com
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="center">
-
-### ₿ Adidab
-Bitcoin-focused content and ideas
-🔗 https://www.adidab.com
-
-</td>
-</tr>
-</table>
-
----
-
-## 📡 How to Connect
-
-- X: https://x.com/onekapisch
-- Threads: https://www.threads.com/@kapischh
-- Bluesky: https://bsky.app/profile/onekapisch.com
-- Primal: https://primal.net/p/nprofile1qqs0hhtwrh5f9j5udp6gzz7epftfmcdqhqy4ta2chg2mlc7h8nu86lge2j9ew
-
----
-
-<div align="center">
-
-### ✨ Philosophy
-
-<b>Build → Learn → Refine → Ship → Repeat</b>
-
-<br/>
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:1F6FEB&height=120&section=footer"/>
-
-</div>
+<div align="center"><br><sub>⭐ If one of these saved you time, a star on the open-source ones means a lot.</sub></div>
