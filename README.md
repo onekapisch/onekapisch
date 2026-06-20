@@ -19,7 +19,7 @@
 
 A one-person studio out of Munich. By day, an **Enterprise AI Architect at Siemens Healthineers**. By night, I ship small, sharp, private tools — local-first software that respects the people who use it: no accounts, no tracking, no subscription traps.
 
-**→ Experience the whole fleet at [onekapisch.com](https://onekapisch.com)** — a hand-coded WebGL world where one swarm of ice cubes becomes a planet, shatters mid-air, and reassembles into every app icon. (~230 cubes, one GPU draw call, real spring physics, ice refracting light at its true index of refraction — 1.31.)
+**→ Experience the whole fleet at [onekapisch.com](https://onekapisch.com)** — a curated WebGL world where one swarm of ice cubes becomes a planet, shatters mid-air, and reassembles into every app icon. (~230 cubes, one GPU draw call, real spring physics, ice refracting light at its true index of refraction — 1.31.)
 
 ### ❄️ The fleet — built to be owned
 
