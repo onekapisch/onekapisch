@@ -25,7 +25,7 @@ A one-person studio out of Munich. By day, an **Enterprise AI Architect at Sieme
 
 | | Product | What it does | Platform | |
 |:--:|---|---|---|---|
-| <img src="docs/icons/skylocation.png" width="32"> | **[SkyLocation](https://github.com/onekapisch/skylocation-website)** | Know exactly where you are — even with no signal | iOS · Android | [site](https://skylocation.app) |
+| <img src="docs/icons/skylocation.png" width="32"> | **[SkyLocation](https://github.com/onekapisch/skylocation)** | Know exactly where you are — even with no signal | iOS · Android | [site](https://skylocation.app) |
 | <img src="docs/icons/tokens.png" width="32"> | **[Tokens 4 Breakfast](https://github.com/onekapisch/Tokens4Breakfast-daily)** | Track AI spend across Claude, GPT, Gemini & more — in your menu bar | macOS | [site](https://tokens4breakfast.app) |
 | <img src="docs/icons/mac4breakfast.png" width="32"> | **[Mac 4 Breakfast](https://github.com/onekapisch/Mac-4-Breakfast)** | All-in-one Mac battery & power — cycle count, temp, live watts, smart alerts | macOS | [site](https://mac4breakfast.app) |
 | <img src="docs/icons/lumel.png" width="32"> | **[LUMEL](https://github.com/onekapisch/LUMEL-public)** | Two-way XDR brightness — push past macOS limits, or dim below the floor | macOS | [site](https://getlumel.app) |
