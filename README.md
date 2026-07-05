@@ -2,10 +2,10 @@
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="docs/hero-light.png">
-  <img src="docs/hero.png" alt="onekapisch — privacy-first software, built to be owned not rented" width="100%" />
+  <img src="docs/hero.png" alt="onekapisch: privacy-first software, built to be owned, not rented" width="100%" />
 </picture>
 
-<p><b>Privacy-first software, built to be owned — not rented.</b></p>
+<p><b>Privacy-first software, built to be owned, not rented.</b></p>
 <p><code>local-first</code> · <code>no telemetry</code> · <code>no ads</code> · <code>nothing sold, ever</code></p>
 
 <a href="https://onekapisch.com"><img src="https://img.shields.io/badge/onekapisch.com-0B0E14?style=flat-square&labelColor=0B0E14" alt="Website"></a>
@@ -17,28 +17,30 @@
 
 ---
 
-A one-person studio out of Munich. By day, an **Enterprise AI Architect at Siemens Healthineers**. By night, I ship small, sharp, private tools — local-first software that respects the people who use it: no accounts, no tracking, no subscription traps.
+A one-person studio out of Munich. By day, an **Enterprise AI Architect at Siemens Healthineers**. By night, I ship small, sharp, private tools: local-first software that respects the people who use it: no accounts, no tracking, no subscription traps.
 
-**→ Experience the whole fleet at [onekapisch.com](https://onekapisch.com)** — a curated WebGL world where one swarm of ice cubes becomes a planet, shatters mid-air, and reassembles into every app icon. (~230 cubes, one GPU draw call, real spring physics, ice refracting light at its true index of refraction — 1.31.)
+**→ Experience the whole fleet at [onekapisch.com](https://onekapisch.com)**: a curated WebGL world where one swarm of ice cubes becomes a planet, shatters mid-air, and reassembles into every app icon. (~230 cubes, one GPU draw call, real spring physics, ice refracting light at its true index of refraction, 1.31.)
 
-### ❄️ The fleet — built to be owned
+### ❄️ The fleet, built to be owned
 
-| | Product | What it does | Platform | |
-|:--:|---|---|---|---|
-| <img src="docs/icons/skylocation.png" width="32"> | **[SkyLocation](https://github.com/onekapisch/skylocation)** | Know exactly where you are — even with no signal | iOS · Android | [site](https://skylocation.app) |
-| <img src="docs/icons/tokens.png" width="32"> | **[Tokens 4 Breakfast](https://github.com/onekapisch/Tokens4Breakfast-daily)** | Track AI spend across Claude, GPT, Gemini & more — in your menu bar | macOS | [site](https://tokens4breakfast.app) |
-| <img src="docs/icons/mac4breakfast.png" width="32"> | **[Mac 4 Breakfast](https://github.com/onekapisch/Mac-4-Breakfast)** | All-in-one Mac battery & power — cycle count, temp, live watts, smart alerts | macOS | [site](https://mac4breakfast.app) |
-| <img src="docs/icons/chime4breakfast.png" width="32"> | **[Chime 4 Breakfast](https://github.com/onekapisch/chime-4-breakfast)** · `open source` | Get pinged when Codex or Claude finish — a sound, plus a screen-edge glow when you step away | macOS | [![stars](https://img.shields.io/github/stars/onekapisch/chime-4-breakfast?style=social&label=)](https://github.com/onekapisch/chime-4-breakfast) |
-| <img src="docs/icons/lumel.png" width="32"> | **[LUMEL](https://github.com/onekapisch/LUMEL-public)** | Two-way XDR brightness — push past macOS limits, or dim below the floor | macOS | [site](https://getlumel.app) |
-| <img src="docs/icons/minimizer.png" width="32"> | **[Minimizer](https://github.com/onekapisch/macOS-Minimizer)** · `open source` | Minimize every window & restore your workspace with one hotkey | macOS | [![stars](https://img.shields.io/github/stars/onekapisch/macOS-Minimizer?style=social&label=)](https://github.com/onekapisch/macOS-Minimizer) |
-| <img src="docs/icons/easywrite.png" width="32"> | **[Easy Write](https://github.com/onekapisch/easy-write)** · `open source` | Translate & rewrite text in any app — formal or informal, 100% on-device | macOS | [![stars](https://img.shields.io/github/stars/onekapisch/easy-write?style=social&label=)](https://github.com/onekapisch/easy-write) |
-| <img src="docs/icons/tminusai.png" width="32"> | **T-MINUSAI** | Compare AI models & plans — no hype, no upsell | web | [site](https://tminusai.com) |
-| <img src="docs/icons/tankalert.png" width="32"> | **TankAlert** | Live fuel prices across Germany, by city & station | iOS · web | [site](https://tankalert.de) |
-| <img src="docs/icons/lifehacks.png" width="32"> | **[Life Hacks Germany](https://github.com/onekapisch/life-hacks-germany)** | Verification-first guides to living in Germany | web | [site](https://lifehacksgermany.com) |
-| <img src="docs/icons/unfoldai.png" width="32"> | **[Unfold AI](https://github.com/onekapisch/Unfold-AI)** · `open source` | Read AI output at your pace — layers, bottom line first | Chrome · Firefox | [![stars](https://img.shields.io/github/stars/onekapisch/Unfold-AI?style=social&label=)](https://github.com/onekapisch/Unfold-AI) |
+<!-- ===== clickable bento · GENERATED by build_readme.mjs, do not hand-edit ===== -->
+<p align="center"><a href="https://www.skylocation.app"><img src="docs/bento/tile-sky.png" width="414" alt="SkyLocation: Know exactly where you are, even without signal. (iOS · Android)"></a><a href="https://www.tokens4breakfast.app"><img src="docs/bento/tile-tok.png" width="414" alt="Tokens 4 Breakfast: The AI-spend guard for builders. (macOS)"></a></p>
+<p align="center"><a href="https://www.mac4breakfast.app"><img src="docs/bento/tile-mac.png" width="414" alt="Mac 4 Breakfast: Your one battery app that does it all. (macOS)"></a><a href="https://getlumel.app"><img src="docs/bento/tile-lum.png" width="414" alt="LUMEL: Brighter than macOS allows. Darker than its minimum. (macOS · App Store)"></a></p>
+<p align="center"><a href="https://github.com/onekapisch/easy-write"><img src="docs/bento/tile-ez.png" width="276" alt="Easy Write: Translate & rewrite in any app. (macOS · open source)"></a><a href="https://github.com/onekapisch/macOS-Minimizer"><img src="docs/bento/tile-min.png" width="276" alt="Minimizer: Every macOS window, minimized at once. (macOS · open source)"></a><a href="https://github.com/onekapisch/chime-4-breakfast"><img src="docs/bento/tile-chime.png" width="276" alt="Chime 4 Breakfast: Get pinged when Codex & Claude finish. (macOS · open source)"></a></p>
+<p align="center"><a href="https://github.com/onekapisch/Unfold-AI"><img src="docs/bento/tile-unf.png" width="207" alt="Unfold AI: Read AI output at your pace, in Chrome & Firefox. (Chrome · Firefox · open source)"></a><a href="https://www.lifehacksgermany.com"><img src="docs/bento/tile-lh.png" width="207" alt="Life Hacks Germany: Verification-first guide to living smart in Germany. (website)"></a><a href="https://tankalert.de"><img src="docs/bento/tile-tank.png" width="207" alt="TankAlert: Live fuel prices for every German city & station. (web app · iOS)"></a><a href="https://tminusai.com"><img src="docs/bento/tile-tmi.png" width="207" alt="T-Minus AI: Compare AI models & plans. No hype. (website)"></a></p>
+
+<p align="center">
+<a href="https://github.com/onekapisch/easy-write/stargazers"><img src="https://img.shields.io/github/stars/onekapisch/easy-write?style=social&label=Easy%20Write" alt="Easy Write stars"></a>
+<a href="https://github.com/onekapisch/macOS-Minimizer/stargazers"><img src="https://img.shields.io/github/stars/onekapisch/macOS-Minimizer?style=social&label=Minimizer" alt="Minimizer stars"></a>
+<a href="https://github.com/onekapisch/chime-4-breakfast/stargazers"><img src="https://img.shields.io/github/stars/onekapisch/chime-4-breakfast?style=social&label=Chime%204%20Breakfast" alt="Chime 4 Breakfast stars"></a>
+<a href="https://github.com/onekapisch/Unfold-AI/stargazers"><img src="https://img.shields.io/github/stars/onekapisch/Unfold-AI?style=social&label=Unfold%20AI" alt="Unfold AI stars"></a>
+</p>
+
+<sub>Every tile is clickable → SkyLocation · Tokens 4 Breakfast · Mac 4 Breakfast · LUMEL · Easy Write · Minimizer · Chime 4 Breakfast · Unfold AI · Life Hacks Germany · TankAlert · T-Minus AI. Consumer apps open their site; open-source apps open their repo.</sub>
+<!-- ===== /clickable bento ===== -->
 
 ### 🛠 How I build
-Local-first by default. No account unless you truly need one. Nothing sold to brokers, no ads, no growth hacks hiding in the work. Buy once, own it — I'd rather ship one honest tool than ten that rent your attention.
+Local-first by default. No account unless you truly need one. Nothing sold to brokers, no ads, no growth hacks hiding in the work. Buy once, own it. I'd rather ship one honest tool than ten that rent your attention.
 
 ### ⚙️ Stack
 `Swift / SwiftUI` · `TypeScript / React` · `vanilla JS + WebGL (Three.js)` · `Node` · `Vercel`
