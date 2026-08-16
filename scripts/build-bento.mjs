@@ -54,27 +54,38 @@ const BG = {
       { x: 0, y: 0, c: [120, 126, 140], a: 0.45, s: 44 },
     ],
   },
-  // Clip 4 Breakfast: the site's own approved direction is "Clipboard
-  // Spectrum" — a cinematic near-black built from the icon's cobalt, violet,
-  // coral and cyan plates. Near-black also keeps it from colliding with the
-  // indigo Mac 4 Breakfast tile beside it.
-  c4b: {
-    top: [30, 40, 86], bot: [7, 9, 18],
-    glows: [
-      { x: 0, y: 0, c: [64, 116, 255], a: 0.72, s: 60 },
-      { x: 86, y: 6, c: [150, 74, 235], a: 0.42, s: 52 },
-      { x: 66, y: 104, c: [0, 208, 208], a: 0.3, s: 46 },
-    ],
-  },
+};
+
+// Clip 4 Breakfast reuses the site hero's "Clipboard Spectrum" field rather
+// than a flat gradient: four rotated light trails over near-black. Colours,
+// the 35deg angle and the per-trail gradient stops are taken verbatim from
+// the site's src/app/spectrum.css so the tile and the hero agree.
+const SPECTRUM = {
+  night: "#05070b",
+  angle: 35,
+  trail: { w: 1500, h: 104 },
+  // Centres stepped along the band direction and perpendicular to it, in the
+  // hero's staggered ratio. The card is wide and short where the hero is tall,
+  // so the stack is placed to read left-to-right in the hero's top-to-bottom
+  // order (blue, violet, coral, cyan) and biased right of the text block.
+  trails: [
+    { cx: 1044, cy: 318, css: "linear-gradient(90deg,transparent,rgba(36,100,255,.4) 16%,#2464ff 34%,#0739ce 76%,rgba(7,57,206,.22) 90%,transparent)" },
+    { cx: 987, cy: 199, css: "linear-gradient(90deg,transparent,rgba(134,45,242,.38) 16%,#862df2 34%,#4910a9 76%,rgba(73,16,169,.22) 90%,transparent)" },
+    { cx: 930, cy: 80, css: "linear-gradient(90deg,transparent,rgba(255,65,108,.4) 16%,#ff416c 34%,#cb1746 76%,rgba(203,23,70,.22) 90%,transparent)" },
+    { cx: 873, cy: -39, css: "linear-gradient(90deg,transparent,rgba(25,211,208,.38) 16%,#19d3d0 34%,#058fbb 76%,rgba(5,143,187,.22) 90%,transparent)" },
+  ],
 };
 
 const TILES = [
   {
-    file: "tile-c4b", size: "large", icon: "clip4breakfast.png", bg: BG.c4b,
+    file: "tile-c4b", size: "large", icon: "clip4breakfast.png", spectrum: SPECTRUM,
     title: "Clip 4 Breakfast",
     tagline: "The clipboard manager that never slows your Mac down.",
     sub: "Recall · Keepers · Paste Stack · Paste As",
-    badges: [{ text: "COMING SOON", accent: true }, { text: "macOS", icon: APPLE }],
+    // Shipping as of v1.0 (direct download, notarized) — same "macOS" badge
+    // the other direct-download Mac apps use. NEW is tinted to the tile's own
+    // coral so it belongs to the spectrum instead of fighting it.
+    badges: [{ text: "NEW", accent: "#ff416c" }, { text: "macOS", icon: APPLE }],
   },
   {
     file: "tile-lum", size: "small", icon: "lumel.png", bg: BG.lum,
@@ -105,15 +116,30 @@ const TILES = [
 function html(t) {
   const S = SIZES[t.size];
   const b = t.bg;
-  const glows = b.glows
-    .map((g) => `radial-gradient(${g.s}% ${g.s}% at ${g.x}% ${g.y}%, rgba(${g.c[0]},${g.c[1]},${g.c[2]},${g.a}), rgba(${g.c[0]},${g.c[1]},${g.c[2]},0) 70%)`)
-    .join(",");
+  const sp = t.spectrum;
+  const glows = sp
+    ? ""
+    : b.glows
+        .map((g) => `radial-gradient(${g.s}% ${g.s}% at ${g.x}% ${g.y}%, rgba(${g.c[0]},${g.c[1]},${g.c[2]},${g.a}), rgba(${g.c[0]},${g.c[1]},${g.c[2]},0) 70%)`)
+        .join(",");
   const iconData = readFileSync(resolve(REPO, "docs/icons", t.icon)).toString("base64");
+
+  // Hero spectrum field: rotated trails + a bottom-left scrim so the colour
+  // reads across the open upper-right while the text stays fully legible.
+  const field = sp
+    ? `<div class="field">${sp.trails
+        .map(
+          (tr) =>
+            `<i class="trail" style="left:${tr.cx - sp.trail.w / 2}px;top:${tr.cy - sp.trail.h / 2}px;width:${sp.trail.w}px;height:${sp.trail.h}px;background:${tr.css};transform:rotate(${sp.angle}deg)"></i>`
+        )
+        .join("")}<u class="scrim"></u></div>`
+    : "";
 
   const badges = t.badges
     .map((bd) => {
       const ic = bd.icon ? `<span class="bi">${bd.icon}</span>` : "";
-      return `<span class="badge${bd.accent ? " accent" : ""}">${ic}${bd.text}</span>`;
+      const style = typeof bd.accent === "string" ? ` style="background:${bd.accent};border-color:rgba(0,0,0,.2);color:#fff"` : "";
+      return `<span class="badge${bd.accent ? " accent" : ""}"${style}>${ic}${bd.text}</span>`;
     })
     .join("");
 
@@ -123,10 +149,20 @@ html,body{width:${S.w}px;height:${S.h}px;background:transparent}
 .wrap{position:relative;width:${S.w}px;height:${S.h}px}
 .card{position:absolute;left:${S.x}px;top:${S.y}px;width:${S.cw}px;height:${S.ch}px;
   border-radius:${S.r}px;overflow:hidden;
-  background:${glows},linear-gradient(180deg,${rgb(b.top)} 0%,${rgb(b.bot)} 100%);
+  background:${sp ? sp.night : `${glows},linear-gradient(180deg,${rgb(b.top)} 0%,${rgb(b.bot)} 100%)`};
   box-shadow:0 ${Math.round(S.r / 2)}px ${S.r}px rgba(0,0,0,.42), inset 0 0 0 1px rgba(255,255,255,.10);
   font-family:-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif;
   color:#fff;-webkit-font-smoothing:antialiased}
+.field{position:absolute;inset:0;overflow:hidden}
+.trail{position:absolute;display:block;border-radius:100px;filter:saturate(125%);opacity:.92;
+  transform-origin:center}
+.trail::before{content:"";position:absolute;inset:2px 0 auto;height:38%;border-radius:inherit;opacity:.72;
+  background:linear-gradient(90deg,transparent 10%,rgba(255,255,255,.03) 23%,rgba(255,255,255,.2) 43%,rgba(255,255,255,.08) 62%,transparent 88%)}
+.trail::after{content:"";position:absolute;inset:auto 0 4px;height:42%;border-radius:inherit;opacity:.68;
+  background:linear-gradient(90deg,transparent 12%,rgba(0,0,0,.06) 24%,rgba(0,0,0,.2) 52%,rgba(0,0,0,.08) 76%,transparent 90%)}
+.scrim{position:absolute;inset:0;display:block;
+  background:linear-gradient(to top right,rgba(5,7,11,.98) 14%,rgba(5,7,11,.80) 38%,rgba(5,7,11,.30) 58%,rgba(5,7,11,0) 76%),
+    radial-gradient(58% 78% at 78% 14%, rgba(47,105,255,.16), transparent 70%)}
 .top{position:absolute;left:${S.pad}px;right:${S.pad}px;top:${S.pad}px;display:flex;
   align-items:flex-start;justify-content:space-between;gap:${S.pad / 2}px}
 .icon{width:${S.icon}px;height:${S.icon}px;border-radius:${Math.round(S.icon * 0.225)}px;
@@ -148,7 +184,7 @@ h1{font-size:${S.title}px;font-weight:700;letter-spacing:-.028em;line-height:1.0
   text-shadow:0 1px 8px rgba(0,0,0,.20)}
 .sub{margin-top:${Math.round(S.tag * 0.42)}px;font-size:${S.sub}px;font-weight:500;
   letter-spacing:-.006em;color:rgba(255,255,255,.62)}
-</style><div class="wrap"><div class="card">
+</style><div class="wrap"><div class="card">${field}
 <div class="top"><img class="icon" src="data:image/png;base64,${iconData}"><div class="badges">${badges}</div></div>
 <div class="text"><h1>${t.title}</h1><div class="tag">${t.tagline}</div>${t.sub ? `<div class="sub">${t.sub}</div>` : ""}</div>
 </div></div>`;
