@@ -79,14 +79,13 @@ const SPECTRUM = {
   ],
 };
 
-// Unfold's field carries the app icon's warm coral shell into a dark reading
-// surface. The three routed lines echo the icon's answer-map layers: summary,
-// outline and saved insight, without turning the tile into a second logo.
+// Unfold uses a blue-only field drawn from its reading interface. The official
+// icon supplies the warm contrast and is intentionally the sole illustration.
 const UNFOLD = {
   background:
-    "radial-gradient(80% 70% at 88% 2%,rgba(255,193,126,.92),transparent 72%)," +
-    "radial-gradient(68% 82% at 8% 0%,rgba(255,91,79,.82),transparent 70%)," +
-    "linear-gradient(158deg,#ff795f 0%,#e95963 30%,#243e76 60%,#0b1427 100%)",
+    "radial-gradient(82% 72% at 8% 0%,rgba(142,184,255,.62),transparent 66%)," +
+    "radial-gradient(72% 86% at 100% 16%,rgba(36,107,255,.54),transparent 72%)," +
+    "linear-gradient(158deg,#557fe4 0%,#2855a7 48%,#07152f 100%)",
 };
 
 const TILES = [
@@ -126,6 +125,7 @@ const TILES = [
   },
   {
     file: "tile-unf", size: "small", icon: "unfoldai.png", unfold: UNFOLD,
+    iconSize: 152,
     title: "Unfold AI",
     tagline: "Long AI answers, made navigable.",
     sub: "Summarize · map · save · private by design",
@@ -135,6 +135,7 @@ const TILES = [
 
 function html(t) {
   const S = SIZES[t.size];
+  const iconSize = t.iconSize || S.icon;
   const b = t.bg;
   const sp = t.spectrum;
   const uf = t.unfold;
@@ -154,19 +155,7 @@ function html(t) {
             `<i class="trail" style="left:${tr.cx - sp.trail.w / 2}px;top:${tr.cy - sp.trail.h / 2}px;width:${sp.trail.w}px;height:${sp.trail.h}px;background:${tr.css};transform:rotate(${sp.angle}deg)"></i>`
         )
         .join("")}<u class="scrim"></u></div>`
-    : uf
-      ? `<div class="unfold-field" aria-hidden="true">
-          <svg class="answer-map" viewBox="0 0 716 528" fill="none">
-            <path class="route route-blue" d="M390 188C485 188 500 130 604 117"/>
-            <path class="route route-white" d="M410 226C510 231 529 181 633 174"/>
-            <path class="route route-mint" d="M437 269C532 279 558 239 656 235"/>
-            <circle class="node node-blue" cx="604" cy="117" r="15"/>
-            <circle class="node node-white" cx="633" cy="174" r="15"/>
-            <circle class="node node-mint" cx="656" cy="235" r="15"/>
-          </svg>
-          <u class="unfold-scrim"></u>
-        </div>`
-      : "";
+    : "";
 
   const badges = t.badges
     .map((bd) => {
@@ -196,19 +185,10 @@ html,body{width:${S.w}px;height:${S.h}px;background:transparent}
 .scrim{position:absolute;inset:0;display:block;
   background:linear-gradient(to top right,rgba(5,7,11,.98) 14%,rgba(5,7,11,.80) 38%,rgba(5,7,11,.30) 58%,rgba(5,7,11,0) 76%),
     radial-gradient(58% 78% at 78% 14%, rgba(47,105,255,.16), transparent 70%)}
-.unfold-field{position:absolute;inset:0;overflow:hidden}
-.answer-map{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 12px 24px rgba(3,9,24,.26))}
-.route{stroke-width:24;stroke-linecap:round;opacity:.68}
-.route-blue{stroke:#2774f0}.route-white{stroke:#f6f9ff}.route-mint{stroke:#28c697}
-.node{stroke:rgba(255,255,255,.38);stroke-width:2}
-.node-blue{fill:#2774f0}.node-white{fill:#f6f9ff}.node-mint{fill:#28c697}
-.unfold-scrim{position:absolute;inset:0;display:block;
-  background:linear-gradient(180deg,rgba(7,16,35,0) 18%,rgba(7,16,35,.22) 43%,rgba(7,16,35,.96) 76%,#071023 100%),
-    linear-gradient(90deg,rgba(7,16,35,.14),rgba(7,16,35,0) 54%)}
 .top{position:absolute;left:${S.pad}px;right:${S.pad}px;top:${S.pad}px;display:flex;
   align-items:flex-start;justify-content:space-between;gap:${S.pad / 2}px}
-.icon{width:${S.icon}px;height:${S.icon}px;border-radius:${Math.round(S.icon * 0.225)}px;
-  display:block;filter:drop-shadow(0 ${Math.round(S.icon * 0.06)}px ${Math.round(S.icon * 0.13)}px rgba(0,0,0,.42))}
+.icon{width:${iconSize}px;height:${iconSize}px;border-radius:${Math.round(iconSize * 0.225)}px;
+  display:block;filter:drop-shadow(0 ${Math.round(iconSize * 0.06)}px ${Math.round(iconSize * 0.13)}px rgba(0,0,0,.42))}
 .badges{display:flex;flex-wrap:wrap;gap:${Math.round(S.badge * 0.34)}px;justify-content:flex-end}
 .badge{display:inline-flex;align-items:center;gap:${Math.round(S.badge * 0.30)}px;
   height:${Math.round(S.badge * 1.72)}px;padding:0 ${Math.round(S.badge * 0.72)}px;
