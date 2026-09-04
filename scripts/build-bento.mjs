@@ -32,6 +32,7 @@ const OUT = resolve(REPO, "docs/bento");
 // so re-rendered tiles sit beside untouched ones without a size mismatch.
 const SIZES = {
   large: { w: 1536, h: 688, cw: 1472, ch: 652, x: 32, y: 8, r: 48, pad: 57, icon: 148, title: 102, tag: 51, sub: 38, badge: 55 },
+  wide: { w: 3072, h: 688, cw: 3008, ch: 652, x: 32, y: 8, r: 48, pad: 57, icon: 148, title: 102, tag: 51, sub: 38, badge: 55 },
   small: { w: 780, h: 564, cw: 716, ch: 528, x: 32, y: 8, r: 44, pad: 57, icon: 117, title: 70, tag: 44, sub: 32, badge: 32 },
 };
 
@@ -59,24 +60,25 @@ const BG = {
   },
 };
 
-// Clip 4 Breakfast reuses the site hero's "Clipboard Spectrum" field rather
-// than a flat gradient: four rotated light trails over near-black. Colours,
-// the 35deg angle and the per-trail gradient stops are taken verbatim from
-// the site's src/app/spectrum.css so the tile and the hero agree.
-const SPECTRUM = {
+// Clip 4 Breakfast reuses the site's Clipboard Spectrum as a cinematic
+// full-width field rather than stretching the old half-width composition.
+const SPECTRUM_WIDE = {
   night: "#05070b",
-  angle: 35,
-  trail: { w: 1500, h: 104 },
-  // Centres stepped along the band direction and perpendicular to it, in the
-  // hero's staggered ratio. The card is wide and short where the hero is tall,
-  // so the stack is placed to read left-to-right in the hero's top-to-bottom
-  // order (blue, violet, coral, cyan) and biased right of the text block.
+  angle: 23,
+  trail: { w: 3000, h: 112 },
   trails: [
-    { cx: 1044, cy: 318, css: "linear-gradient(90deg,transparent,rgba(36,100,255,.4) 16%,#2464ff 34%,#0739ce 76%,rgba(7,57,206,.22) 90%,transparent)" },
-    { cx: 987, cy: 199, css: "linear-gradient(90deg,transparent,rgba(134,45,242,.38) 16%,#862df2 34%,#4910a9 76%,rgba(73,16,169,.22) 90%,transparent)" },
-    { cx: 930, cy: 80, css: "linear-gradient(90deg,transparent,rgba(255,65,108,.4) 16%,#ff416c 34%,#cb1746 76%,rgba(203,23,70,.22) 90%,transparent)" },
-    { cx: 873, cy: -39, css: "linear-gradient(90deg,transparent,rgba(25,211,208,.38) 16%,#19d3d0 34%,#058fbb 76%,rgba(5,143,187,.22) 90%,transparent)" },
+    { cx: 2180, cy: 594, css: "linear-gradient(90deg,transparent,rgba(36,100,255,.34) 12%,#2464ff 34%,#0739ce 76%,rgba(7,57,206,.18) 91%,transparent)" },
+    { cx: 2070, cy: 410, css: "linear-gradient(90deg,transparent,rgba(134,45,242,.34) 12%,#862df2 34%,#4910a9 76%,rgba(73,16,169,.18) 91%,transparent)" },
+    { cx: 1960, cy: 226, css: "linear-gradient(90deg,transparent,rgba(255,65,108,.36) 12%,#ff416c 34%,#cb1746 76%,rgba(203,23,70,.18) 91%,transparent)" },
+    { cx: 1850, cy: 42, css: "linear-gradient(90deg,transparent,rgba(25,211,208,.34) 12%,#19d3d0 34%,#058fbb 76%,rgba(5,143,187,.18) 91%,transparent)" },
   ],
+};
+
+const WIFI = {
+  background:
+    "radial-gradient(62% 112% at 84% 48%,rgba(91,156,255,.42),transparent 66%)," +
+    "radial-gradient(44% 94% at 60% 0%,rgba(255,255,255,.96),transparent 72%)," +
+    "linear-gradient(145deg,#fbfcfd 0%,#e7edf3 52%,#cdd8e4 100%)",
 };
 
 // Unfold uses a blue-only field drawn from its reading interface. The official
@@ -90,7 +92,7 @@ const UNFOLD = {
 
 const TILES = [
   {
-    file: "tile-c4b", size: "large", icon: "clip4breakfast.png", spectrum: SPECTRUM,
+    file: "tile-c4b", size: "wide", icon: "clip4breakfast.png", spectrum: SPECTRUM_WIDE,
     title: "Clip 4 Breakfast",
     tagline: "The clipboard manager that never slows your Mac down.",
     sub: "Recall · Keepers · Paste Stack · Paste As",
@@ -98,6 +100,13 @@ const TILES = [
     // the other direct-download Mac apps use. NEW is tinted to the tile's own
     // coral so it belongs to the spectrum instead of fighting it.
     badges: [{ text: "NEW", accent: "#ff416c" }, { text: "macOS", icon: APPLE }],
+  },
+  {
+    file: "tile-w4b", size: "large", icon: "wifi4breakfast.png", wifi: WIFI,
+    title: "WiFi 4 Breakfast",
+    tagline: "When the Wi-Fi login won't appear.",
+    sub: "One clear next step · device-specific fixes",
+    badges: [{ text: "Web", icon: BROWSER }],
   },
   {
     file: "tile-lum", size: "small", icon: "lumel.png", bg: BG.lum,
@@ -139,7 +148,8 @@ function html(t) {
   const b = t.bg;
   const sp = t.spectrum;
   const uf = t.unfold;
-  const glows = sp || uf
+  const wf = t.wifi;
+  const glows = sp || uf || wf
     ? ""
     : b.glows
         .map((g) => `radial-gradient(${g.s}% ${g.s}% at ${g.x}% ${g.y}%, rgba(${g.c[0]},${g.c[1]},${g.c[2]},${g.a}), rgba(${g.c[0]},${g.c[1]},${g.c[2]},0) 70%)`)
@@ -148,7 +158,17 @@ function html(t) {
 
   // Hero spectrum field: rotated trails + a bottom-left scrim so the colour
   // reads across the open upper-right while the text stays fully legible.
-  const field = sp
+  const field = wf
+    ? `<div class="wifi-field" aria-hidden="true">
+        <svg viewBox="0 0 1472 652" preserveAspectRatio="none" fill="none">
+          <path class="wifi-arc arc-outer" d="M739 388C854 219 1013 139 1162 139C1311 139 1412 213 1492 326"/>
+          <path class="wifi-arc arc-middle" d="M855 413C940 292 1051 237 1162 237C1273 237 1360 289 1435 387"/>
+          <path class="wifi-arc arc-inner" d="M974 433C1026 365 1093 337 1162 337C1230 337 1288 367 1338 426"/>
+          <circle class="wifi-origin" cx="1162" cy="472" r="25"/>
+        </svg>
+        <i class="wifi-sheen"></i><u class="wifi-scrim"></u>
+      </div>`
+    : sp
     ? `<div class="field">${sp.trails
         .map(
           (tr) =>
@@ -171,10 +191,19 @@ html,body{width:${S.w}px;height:${S.h}px;background:transparent}
 .wrap{position:relative;width:${S.w}px;height:${S.h}px}
 .card{position:absolute;left:${S.x}px;top:${S.y}px;width:${S.cw}px;height:${S.ch}px;
   border-radius:${S.r}px;overflow:hidden;
-  background:${sp ? sp.night : uf ? uf.background : `${glows},linear-gradient(180deg,${rgb(b.top)} 0%,${rgb(b.bot)} 100%)`};
+  background:${wf ? wf.background : sp ? sp.night : uf ? uf.background : `${glows},linear-gradient(180deg,${rgb(b.top)} 0%,${rgb(b.bot)} 100%)`};
   box-shadow:0 ${Math.round(S.r / 2)}px ${S.r}px rgba(0,0,0,.42), inset 0 0 0 1px rgba(255,255,255,.10);
   font-family:-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif;
-  color:#fff;-webkit-font-smoothing:antialiased}
+  color:${wf ? "#27313d" : "#fff"};-webkit-font-smoothing:antialiased}
+.wifi-field{position:absolute;inset:0;overflow:hidden}
+.wifi-field svg{position:absolute;inset:0;width:100%;height:100%}
+.wifi-arc{stroke-linecap:round;stroke-width:27}
+.arc-outer{stroke:rgba(71,83,96,.13)}.arc-middle{stroke:rgba(74,90,108,.18)}.arc-inner{stroke:rgba(54,123,220,.28)}
+.wifi-origin{fill:rgba(54,123,220,.78);stroke:rgba(255,255,255,.82);stroke-width:7;filter:drop-shadow(0 9px 20px rgba(54,123,220,.35))}
+.wifi-sheen{position:absolute;left:47%;top:-48%;width:17%;height:190%;display:block;transform:rotate(18deg);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);filter:blur(7px)}
+.wifi-scrim{position:absolute;inset:0;display:block;
+  background:linear-gradient(90deg,rgba(247,250,252,.94) 0%,rgba(247,250,252,.78) 35%,rgba(247,250,252,.1) 63%,rgba(247,250,252,0) 100%)}
 .field{position:absolute;inset:0;overflow:hidden}
 .trail{position:absolute;display:block;border-radius:100px;filter:saturate(125%);opacity:.92;
   transform-origin:center}
@@ -195,6 +224,8 @@ html,body{width:${S.w}px;height:${S.h}px;background:transparent}
   border-radius:999px;font-size:${S.badge}px;font-weight:700;letter-spacing:-.01em;
   background:rgba(12,14,20,.60);border:1px solid rgba(255,255,255,.16);
   color:#fff;white-space:nowrap;backdrop-filter:blur(6px)}
+.card.light .badge{background:rgba(255,255,255,.62);border-color:rgba(39,49,61,.16);color:#27313d;
+  box-shadow:0 10px 24px rgba(39,49,61,.10),inset 0 1px 0 rgba(255,255,255,.9)}
 .badge.accent{background:linear-gradient(180deg,#ffb35c,#ff8a2b);border-color:rgba(0,0,0,.18);color:#1a1206}
 .bi{display:inline-flex;width:${Math.round(S.badge * 0.95)}px;height:${Math.round(S.badge * 0.95)}px}
 .bi svg{width:100%;height:100%;display:block}
@@ -206,7 +237,9 @@ h1{font-size:${S.title}px;font-weight:700;letter-spacing:-.028em;line-height:1.0
   text-shadow:0 1px 8px rgba(0,0,0,.20)}
 .sub{margin-top:${Math.round(S.tag * 0.42)}px;font-size:${S.sub}px;font-weight:500;
   letter-spacing:-.006em;color:rgba(255,255,255,.62)}
-</style><div class="wrap"><div class="card">${field}
+.card.light h1,.card.light .tag{color:#27313d;text-shadow:none}
+.card.light .sub{color:rgba(54,67,82,.66)}
+</style><div class="wrap"><div class="card${wf ? " light" : ""}">${field}
 <div class="top"><img class="icon" src="data:image/png;base64,${iconData}"><div class="badges">${badges}</div></div>
 <div class="text"><h1>${t.title}</h1><div class="tag">${t.tagline}</div>${t.sub ? `<div class="sub">${t.sub}</div>` : ""}</div>
 </div></div>`;
