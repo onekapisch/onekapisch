@@ -2,6 +2,7 @@
 //
 // Usage (needs Playwright, no package.json required):
 //   npx --yes --package playwright node scripts/build-bento.mjs
+//   npx --yes --package playwright node scripts/build-bento.mjs . tile-unf
 //
 // The README bento previously credited a `build_readme.mjs` that was never
 // committed, so the tiles had no reproducible source. This is that source.
@@ -14,7 +15,7 @@
 // originals so a re-rendered tile keeps its colour.
 //
 // TILES below covers the tiles this script renders. The remaining tiles in
-// docs/bento (sky, tok, mac, unf, lh, tank, tmi) are earlier assets that
+// docs/bento (sky, tok, mac, lh, tank, tmi) are earlier assets that
 // predate this script; add them here when they next need to change.
 
 import { chromium } from "playwright";
@@ -38,6 +39,8 @@ const APPLE =
   '<svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>';
 const GITHUB =
   '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>';
+const BROWSER =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="3.5" width="19" height="17" rx="3"/><path d="M3 8.5h18"/><circle cx="6" cy="6" r=".7" fill="currentColor" stroke="none"/><circle cx="9" cy="6" r=".7" fill="currentColor" stroke="none"/></svg>';
 
 const rgb = (a) => `rgb(${a[0]},${a[1]},${a[2]})`;
 
@@ -76,6 +79,16 @@ const SPECTRUM = {
   ],
 };
 
+// Unfold's field carries the app icon's warm coral shell into a dark reading
+// surface. The three routed lines echo the icon's answer-map layers: summary,
+// outline and saved insight, without turning the tile into a second logo.
+const UNFOLD = {
+  background:
+    "radial-gradient(80% 70% at 88% 2%,rgba(255,193,126,.92),transparent 72%)," +
+    "radial-gradient(68% 82% at 8% 0%,rgba(255,91,79,.82),transparent 70%)," +
+    "linear-gradient(158deg,#ff795f 0%,#e95963 30%,#243e76 60%,#0b1427 100%)",
+};
+
 const TILES = [
   {
     file: "tile-c4b", size: "large", icon: "clip4breakfast.png", spectrum: SPECTRUM,
@@ -111,13 +124,21 @@ const TILES = [
     tagline: "Get pinged when Codex & Claude finish.",
     badges: [{ text: "macOS", icon: APPLE }, { text: "Open source", icon: GITHUB }],
   },
+  {
+    file: "tile-unf", size: "small", icon: "unfoldai.png", unfold: UNFOLD,
+    title: "Unfold AI",
+    tagline: "Long AI answers, made navigable.",
+    sub: "Summarize · map · save · private by design",
+    badges: [{ text: "Chrome + Firefox", icon: BROWSER }],
+  },
 ];
 
 function html(t) {
   const S = SIZES[t.size];
   const b = t.bg;
   const sp = t.spectrum;
-  const glows = sp
+  const uf = t.unfold;
+  const glows = sp || uf
     ? ""
     : b.glows
         .map((g) => `radial-gradient(${g.s}% ${g.s}% at ${g.x}% ${g.y}%, rgba(${g.c[0]},${g.c[1]},${g.c[2]},${g.a}), rgba(${g.c[0]},${g.c[1]},${g.c[2]},0) 70%)`)
@@ -133,7 +154,19 @@ function html(t) {
             `<i class="trail" style="left:${tr.cx - sp.trail.w / 2}px;top:${tr.cy - sp.trail.h / 2}px;width:${sp.trail.w}px;height:${sp.trail.h}px;background:${tr.css};transform:rotate(${sp.angle}deg)"></i>`
         )
         .join("")}<u class="scrim"></u></div>`
-    : "";
+    : uf
+      ? `<div class="unfold-field" aria-hidden="true">
+          <svg class="answer-map" viewBox="0 0 716 528" fill="none">
+            <path class="route route-blue" d="M390 188C485 188 500 130 604 117"/>
+            <path class="route route-white" d="M410 226C510 231 529 181 633 174"/>
+            <path class="route route-mint" d="M437 269C532 279 558 239 656 235"/>
+            <circle class="node node-blue" cx="604" cy="117" r="15"/>
+            <circle class="node node-white" cx="633" cy="174" r="15"/>
+            <circle class="node node-mint" cx="656" cy="235" r="15"/>
+          </svg>
+          <u class="unfold-scrim"></u>
+        </div>`
+      : "";
 
   const badges = t.badges
     .map((bd) => {
@@ -149,7 +182,7 @@ html,body{width:${S.w}px;height:${S.h}px;background:transparent}
 .wrap{position:relative;width:${S.w}px;height:${S.h}px}
 .card{position:absolute;left:${S.x}px;top:${S.y}px;width:${S.cw}px;height:${S.ch}px;
   border-radius:${S.r}px;overflow:hidden;
-  background:${sp ? sp.night : `${glows},linear-gradient(180deg,${rgb(b.top)} 0%,${rgb(b.bot)} 100%)`};
+  background:${sp ? sp.night : uf ? uf.background : `${glows},linear-gradient(180deg,${rgb(b.top)} 0%,${rgb(b.bot)} 100%)`};
   box-shadow:0 ${Math.round(S.r / 2)}px ${S.r}px rgba(0,0,0,.42), inset 0 0 0 1px rgba(255,255,255,.10);
   font-family:-apple-system,"SF Pro Display","Helvetica Neue",Helvetica,Arial,sans-serif;
   color:#fff;-webkit-font-smoothing:antialiased}
@@ -163,6 +196,15 @@ html,body{width:${S.w}px;height:${S.h}px;background:transparent}
 .scrim{position:absolute;inset:0;display:block;
   background:linear-gradient(to top right,rgba(5,7,11,.98) 14%,rgba(5,7,11,.80) 38%,rgba(5,7,11,.30) 58%,rgba(5,7,11,0) 76%),
     radial-gradient(58% 78% at 78% 14%, rgba(47,105,255,.16), transparent 70%)}
+.unfold-field{position:absolute;inset:0;overflow:hidden}
+.answer-map{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 12px 24px rgba(3,9,24,.26))}
+.route{stroke-width:24;stroke-linecap:round;opacity:.68}
+.route-blue{stroke:#2774f0}.route-white{stroke:#f6f9ff}.route-mint{stroke:#28c697}
+.node{stroke:rgba(255,255,255,.38);stroke-width:2}
+.node-blue{fill:#2774f0}.node-white{fill:#f6f9ff}.node-mint{fill:#28c697}
+.unfold-scrim{position:absolute;inset:0;display:block;
+  background:linear-gradient(180deg,rgba(7,16,35,0) 18%,rgba(7,16,35,.22) 43%,rgba(7,16,35,.96) 76%,#071023 100%),
+    linear-gradient(90deg,rgba(7,16,35,.14),rgba(7,16,35,0) 54%)}
 .top{position:absolute;left:${S.pad}px;right:${S.pad}px;top:${S.pad}px;display:flex;
   align-items:flex-start;justify-content:space-between;gap:${S.pad / 2}px}
 .icon{width:${S.icon}px;height:${S.icon}px;border-radius:${Math.round(S.icon * 0.225)}px;
@@ -190,9 +232,16 @@ h1{font-size:${S.title}px;font-weight:700;letter-spacing:-.028em;line-height:1.0
 </div></div>`;
 }
 
+const requested = new Set(process.argv.slice(3));
+const selected = requested.size ? TILES.filter((tile) => requested.has(tile.file)) : TILES;
+if (requested.size && selected.length !== requested.size) {
+  const known = TILES.map((tile) => tile.file).join(", ");
+  throw new Error(`Unknown tile name. Available tiles: ${known}`);
+}
+
 const browser = await chromium.launch();
 mkdirSync(OUT, { recursive: true });
-for (const t of TILES) {
+for (const t of selected) {
   const S = SIZES[t.size];
   const page = await browser.newPage({ viewport: { width: S.w, height: S.h }, deviceScaleFactor: 1 });
   await page.setContent(html(t), { waitUntil: "load" });
