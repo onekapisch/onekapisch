@@ -14,9 +14,9 @@
 // gradient plus radial glows, sampled from the content-free padding of the
 // originals so a re-rendered tile keeps its colour.
 //
-// TILES below covers the tiles this script renders. The remaining tiles in
-// docs/bento (sky, tok, mac, lh, tank, tmi) are earlier assets that
-// predate this script; add them here when they next need to change.
+// TILES covers every tile in the profile grid. Six older tiles keep their
+// original art direction through immutable source layers in docs/bento/source;
+// the renderer replaces only their app-icon layer.
 
 import { chromium } from "playwright";
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
@@ -26,14 +26,15 @@ import { fileURLToPath } from "node:url";
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = process.argv[2] || resolve(HERE, "..");
 const OUT = resolve(REPO, "docs/bento");
+const ICON_SIZE = 152;
 
 // Type scale derived by measuring cap heights in the committed originals
 // (large title cap 74px, small title cap 49px) and back-solving font sizes,
 // so re-rendered tiles sit beside untouched ones without a size mismatch.
 const SIZES = {
-  large: { w: 1536, h: 688, cw: 1472, ch: 652, x: 32, y: 8, r: 48, pad: 57, icon: 148, title: 102, tag: 51, sub: 38, badge: 55 },
-  wide: { w: 3072, h: 688, cw: 3008, ch: 652, x: 32, y: 8, r: 48, pad: 57, icon: 148, title: 102, tag: 51, sub: 38, badge: 55 },
-  small: { w: 780, h: 564, cw: 716, ch: 528, x: 32, y: 8, r: 44, pad: 57, icon: 117, title: 70, tag: 44, sub: 32, badge: 32 },
+  large: { w: 1536, h: 688, cw: 1472, ch: 652, x: 32, y: 8, r: 48, pad: 57, icon: ICON_SIZE, title: 102, tag: 51, sub: 38, badge: 55 },
+  wide: { w: 3072, h: 688, cw: 3008, ch: 652, x: 32, y: 8, r: 48, pad: 57, icon: ICON_SIZE, title: 102, tag: 51, sub: 38, badge: 55 },
+  small: { w: 780, h: 564, cw: 716, ch: 528, x: 32, y: 8, r: 44, pad: 57, icon: ICON_SIZE, title: 70, tag: 44, sub: 32, badge: 32 },
 };
 
 const APPLE =
@@ -91,6 +92,9 @@ const UNFOLD = {
 };
 
 const TILES = [
+  { file: "tile-sky", size: "large", icon: "skylocation.png", legacyBase: "tile-sky.png" },
+  { file: "tile-tok", size: "large", icon: "tokens.png", legacyBase: "tile-tok.png" },
+  { file: "tile-mac", size: "large", icon: "mac4breakfast.png", legacyBase: "tile-mac.png" },
   {
     file: "tile-c4b", size: "wide", icon: "clip4breakfast.png", spectrum: SPECTRUM_WIDE,
     title: "Clip 4 Breakfast",
@@ -134,17 +138,32 @@ const TILES = [
   },
   {
     file: "tile-unf", size: "small", icon: "unfoldai.png", unfold: UNFOLD,
-    iconSize: 152,
     title: "Unfold AI",
     tagline: "Long AI answers, made navigable.",
     sub: "Summarize · map · save · private by design",
     badges: [{ text: "Chrome + Firefox", icon: BROWSER }],
   },
+  { file: "tile-lh", size: "small", icon: "lifehacks.png", legacyBase: "tile-lh.png" },
+  { file: "tile-tank", size: "small", icon: "tankalert.png", legacyBase: "tile-tank.png" },
+  { file: "tile-tmi", size: "small", icon: "tminusai.png", legacyBase: "tile-tmi.png" },
 ];
 
 function html(t) {
   const S = SIZES[t.size];
   const iconSize = t.iconSize || S.icon;
+  const iconData = readFileSync(resolve(REPO, "docs/icons", t.icon)).toString("base64");
+
+  if (t.legacyBase) {
+    const baseData = readFileSync(resolve(REPO, "docs/bento/source", t.legacyBase)).toString("base64");
+    return `<!doctype html><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:${S.w}px;height:${S.h}px;background:transparent;overflow:hidden}
+.base{position:absolute;inset:0;width:100%;height:100%;display:block}
+.icon{position:absolute;left:89px;top:60px;width:${iconSize}px;height:${iconSize}px;display:block;
+  filter:drop-shadow(0 ${Math.round(iconSize * 0.06)}px ${Math.round(iconSize * 0.13)}px rgba(0,0,0,.42))}
+</style><img class="base" src="data:image/png;base64,${baseData}"><img class="icon" src="data:image/png;base64,${iconData}">`;
+  }
+
   const b = t.bg;
   const sp = t.spectrum;
   const uf = t.unfold;
@@ -154,8 +173,6 @@ function html(t) {
     : b.glows
         .map((g) => `radial-gradient(${g.s}% ${g.s}% at ${g.x}% ${g.y}%, rgba(${g.c[0]},${g.c[1]},${g.c[2]},${g.a}), rgba(${g.c[0]},${g.c[1]},${g.c[2]},0) 70%)`)
         .join(",");
-  const iconData = readFileSync(resolve(REPO, "docs/icons", t.icon)).toString("base64");
-
   // Hero spectrum field: rotated trails + a bottom-left scrim so the colour
   // reads across the open upper-right while the text stays fully legible.
   const field = wf
