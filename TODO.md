@@ -1,4 +1,4 @@
 # Profile follow-ups
 
-- Update Teslatch beta wording when external availability or App Store release changes.
-- Keep the Teslatch tile website destination until the owner requests a different target.
+- Update Handlefree beta wording when external availability or App Store release changes.
+- Keep the Handlefree tile linked to https://handlefree.app/ until the owner requests a different target.

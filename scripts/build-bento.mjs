@@ -93,11 +93,11 @@ const UNFOLD = {
 
 const TILES = [
   {
-    file: "tile-teslatch", size: "wide", icon: "teslatch.png", teslatch: true,
+    file: "tile-handlefree", size: "wide", icon: "handlefree.png", doorArt: true,
     unfold: { background: "radial-gradient(ellipse at 80% 70%,#491018 0%,#17191d 36%,#080a0d 76%)" },
-    title: "Teslatch",
-    tagline: "Your Tesla. A quicker way in.",
-    sub: "Door unlatch · Shortcuts · Action Button · Apple Watch",
+    title: "Handlefree",
+    tagline: "Skip the handle. One press.",
+    sub: "Every door · Shortcuts · Action Button · Control Center · Apple Watch",
     badges: [{ text: "BETA", accent: "#cc1424" }, { text: "Web", icon: BROWSER }, { text: "iOS", icon: APPLE }],
   },
   { file: "tile-sky", size: "large", icon: "skylocation.png", legacyBase: "tile-sky.png" },
@@ -266,7 +266,7 @@ h1{font-size:${S.title}px;font-weight:700;letter-spacing:-.028em;line-height:1.0
 .card.light .sub{color:rgba(54,67,82,.66)}
 .door-art{position:absolute;right:390px;top:115px;width:530px;height:530px;object-fit:contain;filter:drop-shadow(28px 10px 32px rgba(255,20,38,.23));transform:rotate(-5deg)}
 </style><div class="wrap"><div class="card${wf ? " light" : ""}">${field}
-${t.teslatch ? `<img class="door-art" alt="" src="data:image/png;base64,${readFileSync(resolve(REPO, 'docs/icons/teslatch-door.png')).toString('base64')}">` : ''}
+${t.doorArt ? `<img class="door-art" alt="" src="data:image/png;base64,${readFileSync(resolve(REPO, 'docs/icons/handlefree-door.png')).toString('base64')}">` : ''}
 <div class="top"><img class="icon" src="data:image/png;base64,${iconData}"><div class="badges">${badges}</div></div>
 <div class="text"><h1>${t.title}</h1><div class="tag">${t.tagline}</div>${t.sub ? `<div class="sub">${t.sub}</div>` : ""}</div>
 </div></div>`;
