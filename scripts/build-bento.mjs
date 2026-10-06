@@ -118,7 +118,8 @@ const TILES = [
     title: "WiFi 4 Breakfast",
     tagline: "When the Wi-Fi login won't appear.",
     sub: "One clear next step · device-specific fixes",
-    badges: [{ text: "Web", icon: BROWSER }],
+    // iOS app live on the App Store since 2026-10-06; same chip as Handlefree.
+    badges: [{ text: "Web", icon: BROWSER }, { text: "iOS", icon: APPLE }],
   },
   {
     file: "tile-lum", size: "small", icon: "lumel.png", bg: BG.lum,

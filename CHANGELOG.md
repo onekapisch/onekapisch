@@ -1,5 +1,9 @@
 # Profile changelog
 
+## 2026-10-06
+
+- Added an iOS chip beside Web on the WiFi 4 Breakfast tile (tile-w4b) now that the iPhone and iPad app is live on the App Store. Only that tile was re-rendered; its alt text now reads "(web · iOS)".
+
 ## 2026-09-23
 
 - Renamed the Teslatch beta tile to Handlefree (tile-handlefree), with the tagline "Skip the handle. One press." and a link to https://handlefree.app/. Icon and door art are unchanged apart from file names.
