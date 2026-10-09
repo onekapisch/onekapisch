@@ -98,7 +98,8 @@ const TILES = [
     title: "Handlefree",
     tagline: "Skip the handle. One press.",
     sub: "Every door · Shortcuts · Action Button · Control Center · Apple Watch",
-    badges: [{ text: "BETA", accent: "#cc1424" }, { text: "Web", icon: BROWSER }, { text: "iOS", icon: APPLE }],
+    // On the App Store since 2026-10-07: same chip as LUMEL, no beta label.
+    badges: [{ text: "App Store", icon: APPLE }, { text: "Web", icon: BROWSER }],
   },
   { file: "tile-sky", size: "large", icon: "skylocation.png", legacyBase: "tile-sky.png" },
   { file: "tile-tok", size: "large", icon: "tokens.png", legacyBase: "tile-tok.png" },
@@ -118,7 +119,7 @@ const TILES = [
     title: "WiFi 4 Breakfast",
     tagline: "When the Wi-Fi login won't appear.",
     sub: "One clear next step · device-specific fixes",
-    // iOS app live on the App Store since 2026-10-06; same chip as Handlefree.
+    // iOS app live on the App Store since 2026-10-06.
     badges: [{ text: "Web", icon: BROWSER }, { text: "iOS", icon: APPLE }],
   },
   {
