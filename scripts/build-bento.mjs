@@ -99,7 +99,7 @@ const TILES = [
     tagline: "Skip the handle of your Tesla. A simpler way in.",
     sub: "Every door · Shortcuts · Action Button · Control Center · Apple Watch",
     // On the App Store since 2026-10-07. "New release" uses Handlefree's own red.
-    badges: [{ text: "New release", accent: "#e82127" }, { image: "appstore-badge.svg", alt: "Download on the App Store" }, { text: "Web", icon: BROWSER }],
+    badges: [{ text: "New release", accent: "#e82127" }, { image: "appstore-badge.svg", alt: "Download on the App Store" }],
   },
   { file: "tile-sky", size: "large", icon: "skylocation.png", legacyBase: "tile-sky.png" },
   { file: "tile-tok", size: "large", icon: "tokens.png", legacyBase: "tile-tok.png" },
