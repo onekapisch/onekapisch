@@ -2,6 +2,7 @@
 
 ## 2026-10-09
 
+- README links the Handlefree tile with a ?v= cache key so browsers fetch the new image (bump it whenever the tile is re-rendered).
 - Removed the Web chip from the Handlefree tile: it is an iPhone app, and handlefree.app is its website, not a web app.
 - Star badges now list the six most-starred public repos, highest first: Easy Write, Mac 4 Breakfast, Tokens 4 Breakfast, Chime 4 Breakfast, Minimizer, Unfold AI. Counts are live from shields.io; the order is set by hand.
 - The Handlefree tile now shows Apple's official "Download on the App Store" badge (docs/icons/appstore-badge.svg, unmodified, the same file as on handlefree.app) instead of the text chip. build-bento.mjs gained image badges (`{ image, alt }`) for official store artwork.
