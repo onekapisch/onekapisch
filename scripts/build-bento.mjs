@@ -99,7 +99,7 @@ const TILES = [
     tagline: "Skip the handle of your Tesla. A simpler way in.",
     sub: "Every door · Shortcuts · Action Button · Control Center · Apple Watch",
     // On the App Store since 2026-10-07. "New release" uses Handlefree's own red.
-    badges: [{ text: "New release", accent: "#e82127" }, { text: "App Store", icon: APPLE }, { text: "Web", icon: BROWSER }],
+    badges: [{ text: "New release", accent: "#e82127" }, { image: "appstore-badge.svg", alt: "Download on the App Store" }, { text: "Web", icon: BROWSER }],
   },
   { file: "tile-sky", size: "large", icon: "skylocation.png", legacyBase: "tile-sky.png" },
   { file: "tile-tok", size: "large", icon: "tokens.png", legacyBase: "tile-tok.png" },
@@ -206,6 +206,11 @@ html,body{width:${S.w}px;height:${S.h}px;background:transparent;overflow:hidden}
 
   const badges = t.badges
     .map((bd) => {
+      // Official store artwork (e.g. Apple's "Download on the App Store" badge), embedded unmodified.
+      if (bd.image) {
+        const svg = readFileSync(resolve(REPO, "docs/icons", bd.image)).toString("base64");
+        return `<img class="store" alt="${bd.alt || ""}" src="data:image/svg+xml;base64,${svg}">`;
+      }
       const ic = bd.icon ? `<span class="bi">${bd.icon}</span>` : "";
       const style = typeof bd.accent === "string" ? ` style="background:${bd.accent};border-color:rgba(0,0,0,.2);color:#fff"` : "";
       return `<span class="badge${bd.accent ? " accent" : ""}"${style}>${ic}${bd.text}</span>`;
@@ -254,6 +259,7 @@ html,body{width:${S.w}px;height:${S.h}px;background:transparent}
 .card.light .badge{background:rgba(255,255,255,.62);border-color:rgba(39,49,61,.16);color:#27313d;
   box-shadow:0 10px 24px rgba(39,49,61,.10),inset 0 1px 0 rgba(255,255,255,.9)}
 .badge.accent{background:linear-gradient(180deg,#ffb35c,#ff8a2b);border-color:rgba(0,0,0,.18);color:#1a1206}
+.store{height:${Math.round(S.badge * 1.72)}px;width:auto;display:block}
 .bi{display:inline-flex;width:${Math.round(S.badge * 0.95)}px;height:${Math.round(S.badge * 0.95)}px}
 .bi svg{width:100%;height:100%;display:block}
 .text{position:absolute;left:${S.pad}px;right:${S.pad}px;bottom:${S.pad}px}
