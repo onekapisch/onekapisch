@@ -96,10 +96,10 @@ const TILES = [
     file: "tile-handlefree", size: "wide", icon: "handlefree.png", doorArt: true,
     unfold: { background: "radial-gradient(ellipse at 80% 70%,#491018 0%,#17191d 36%,#080a0d 76%)" },
     title: "Handlefree",
-    tagline: "Skip the handle. One press.",
+    tagline: "Skip the handle of your Tesla. A simpler way in.",
     sub: "Every door · Shortcuts · Action Button · Control Center · Apple Watch",
-    // On the App Store since 2026-10-07: same chip as LUMEL, no beta label.
-    badges: [{ text: "App Store", icon: APPLE }, { text: "Web", icon: BROWSER }],
+    // On the App Store since 2026-10-07. "New release" uses Handlefree's own red.
+    badges: [{ text: "New release", accent: "#e82127" }, { text: "App Store", icon: APPLE }, { text: "Web", icon: BROWSER }],
   },
   { file: "tile-sky", size: "large", icon: "skylocation.png", legacyBase: "tile-sky.png" },
   { file: "tile-tok", size: "large", icon: "tokens.png", legacyBase: "tile-tok.png" },

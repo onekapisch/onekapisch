@@ -2,6 +2,7 @@
 
 ## 2026-10-09
 
+- Handlefree moved to the first row of the bento (owner request), with a red "New release" badge beside App Store and Web and the tagline "Skip the handle of your Tesla. A simpler way in." Alt text adds the non-affiliation note.
 - Handlefree is on the App Store (released 7 October 2026). Its tile (tile-handlefree) drops the BETA label and shows App Store and Web chips, like LUMEL. Only that tile was re-rendered; alt text and the tile list no longer say beta.
 
 ## 2026-10-06
