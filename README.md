@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="docs/hero-light.png">
-  <img src="docs/hero.png" alt="onekapisch: privacy-first software, built to be owned, not rented" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="docs/hero-light.png?v=20261119">
+  <img src="docs/hero.png?v=20261119" alt="OneKapisch, software studio built in Germany. Built for your day. Not your data. Apps for macOS, iOS, Android and Web: SkyLocation, Handlefree, AnonyMax, Tokens 4 Breakfast, Mac 4 Breakfast, Clip 4 Breakfast, Easy Write and more." width="100%" />
 </picture>
 
 <p><b>Privacy-first software, built to be owned, not rented.</b></p>
