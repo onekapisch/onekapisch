@@ -10,14 +10,14 @@
 
 <a href="https://onekapisch.com"><img src="https://img.shields.io/badge/onekapisch.com-0B0E14?style=flat-square&labelColor=0B0E14" alt="Website"></a>
 <a href="https://x.com/onekapisch"><img src="https://img.shields.io/badge/X-0B0E14?style=flat-square&logo=x&logoColor=white" alt="X"></a>
-<a href="https://www.threads.com/@kapisch_ai"><img src="https://img.shields.io/badge/Threads-0B0E14?style=flat-square&logo=threads&logoColor=white" alt="Threads"></a>
+<a href="https://www.threads.com/@onekapischh"><img src="https://img.shields.io/badge/Threads-0B0E14?style=flat-square&logo=threads&logoColor=white" alt="Threads"></a>
 <a href="https://bsky.app/profile/onekapisch.com"><img src="https://img.shields.io/badge/Bluesky-0B0E14?style=flat-square&logo=bluesky&logoColor=white" alt="Bluesky"></a>
 
 </div>
 
 ---
 
-A one-person studio out of Munich. By day, an **Enterprise AI Architect**. By night, I ship small, sharp, private tools: local-first software that respects the people who use it: no accounts, no tracking, no subscription traps.
+A one-person studio in Germany. By day, an **Enterprise AI Architect**. By night, I ship small, sharp, private tools: local-first software that respects the people who use it: no accounts, no tracking, no subscription traps.
 
 **→ Experience the whole fleet at [onekapisch.com](https://onekapisch.com)**: a curated WebGL world where one swarm of ice cubes becomes a planet, shatters mid-air, and reassembles into every app icon. (~230 cubes, one GPU draw call, real spring physics, ice refracting light at its true index of refraction, 1.31.)
 
@@ -51,6 +51,6 @@ Local-first by default. No account unless you truly need one. Nothing sold to br
 `Swift / SwiftUI` · `TypeScript / React` · `vanilla JS + WebGL (Three.js)` · `Node` · `Vercel`
 
 ### 🤝 Find me
-[onekapisch.com](https://onekapisch.com) · [X](https://x.com/onekapisch) · [Threads](https://www.threads.com/@kapisch_ai) · [Bluesky](https://bsky.app/profile/onekapisch.com) · `kapisch@icloud.com`
+[onekapisch.com](https://onekapisch.com) · [X](https://x.com/onekapisch) · [Threads](https://www.threads.com/@onekapischh) · [Bluesky](https://bsky.app/profile/onekapisch.com) · `support@onekapisch.com`
 
 <div align="center"><br><sub>⭐ If one of these saved you time, a star on the open-source ones means a lot.</sub></div>
